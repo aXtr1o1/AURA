@@ -117,6 +117,16 @@ DO proceed with the next question immediately if the candidate fails to answer.
 The evaluation summary must be comprehensive, including ratings for each category and a final overall performance rating.
 The evaluation summary must be provided to the candidate at the end of the inetrview if they ask for it.
 `,
+"temperature": 0.7,
+"turn_detection": {
+            "type": "server_vad",
+            "threshold": 0.8,
+            "prefix_padding_ms": 200,
+            "silence_duration_ms": 2000,
+           
+            "interrupt_response" : true,
+
+        },
     }),
   });
 
