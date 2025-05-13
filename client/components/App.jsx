@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "/assets/openai-logomark.svg";
+import logo from "/assets/aXtrLabsicon.png";
 import EventLog from "./EventLog";
 import SessionControls from "./SessionControls";
 import ToolPanel from "./ToolPanel";
@@ -125,12 +125,18 @@ export default function App() {
 
   return (
     <>
-      <nav className="absolute top-0 left-0 right-0 h-16 flex items-center">
-        <div className="flex items-center gap-4 w-full h-fit ">
-          <img style={{ width: "48px" }} src={logo} />
-          <h1>Artificial Uplift and Recruiting Assistant (A.U.R.A)</h1>
+      <nav className="absolute top-0 left-0 right-0 h-16 flex items-center justify-between px-4">
+        {/* Left Side */}
+        <div className="flex items-center gap-4">
+          <h1 className="text-xl font-semibold">A.U.R.A. - AI Uplift & Recruiting Agent</h1>
+        </div>
+
+        {/* Right Side */}
+        <div>
+          <img style={{ width: "150px" }} src={logo} alt="aXtrLabs Logo" />
         </div>
       </nav>
+
       <main className="absolute top-16 left-0 right-0 bottom-0">
         
           <section className="absolute top-0 left-0 right-0 bottom-32 px-4 overflow-y-auto">
