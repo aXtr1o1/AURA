@@ -26,6 +26,12 @@ await server.register(fastifyEnv, { dotenv: true, schema });
 await server.register(FastifyVite, {
   root: import.meta.url,
   renderer: "@fastify/react",
+  prefix: "/aura/minimalPoC",
+  replyDecorator: true, // 👈 Required to enable reply.html()
+});
+
+server.get("/aura/minimalPoC/*", async (req, reply) => {
+  return reply.html(); // SSR entrypoint for sub-routes
 });
 
 await server.vite.ready();
