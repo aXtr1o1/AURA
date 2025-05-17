@@ -151,4 +151,4 @@ The evaluation summary must definitely be provided to the candidate at the end o
   });
 });
 
-await server.listen({ port: process.env.PORT || 3000 });
+await server.listen({ port: process.env.PORT || 3000, host: '0.0.0.0' });
